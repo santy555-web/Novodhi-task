@@ -1,0 +1,67 @@
+<div class="container">
+<form [formGroup]="customerDetails" (ngSubmit)="onBasicSubmit()">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>
+        Customer Details
+      </h3>
+    </div>
+  </div>
+  <div class="row">
+
+      <mat-form-field class="full-width-input">
+        <input type="text" matInput placeholder="First Name" formControlName="firstName" />
+        <mat-error *ngIf="customerDetails.get('firstName').hasError('required') && !customerDetails.get('firstName').pristine">First Name is Required!...</mat-error>
+      </mat-form-field>&nbsp;&nbsp;
+
+
+      <mat-form-field class="full-width-input">
+        <input type="text" matInput placeholder="Last Name" formControlName="lastName" />
+        <mat-error *ngIf="customerDetails.get('lastName').hasError('required') && !customerDetails.get('lastName').pristine">Last Name is Required!...</mat-error>
+      </mat-form-field>&nbsp;&nbsp;
+
+
+      <mat-form-field class="full-width-input">
+        <input type="text" matInput placeholder="Phone Number" formControlName="phoneNumber" />
+        <mat-error *ngIf="customerDetails.get('phoneNumber').hasError('required') && !customerDetails.get('phoneNumber').pristine">Phone Number is Required!...</mat-error>
+      </mat-form-field>&nbsp;&nbsp;
+
+  </div>
+  <div class="row">
+
+    <mat-form-field class="full-width-input">
+      <input matInput type="text" placeholder="Address" formControlName="address" />
+      <mat-error *ngIf="customerDetails.get('lastName').hasError('required') && !customerDetails.get('lastName').pristine">Address is Required!...</mat-error>
+    </mat-form-field>&nbsp;&nbsp;
+
+
+      <mat-form-field class="full-width-input">
+        <input matInput type="text" placeholder="Street" formControlName="street" />
+        <mat-error *ngIf="customerDetails.get('street').hasError('required') && !customerDetails.get('street').pristine">Street is Required!...</mat-error>
+      </mat-form-field>&nbsp;&nbsp;
+
+
+      <mat-form-field class="full-width-input">
+        <input matInput type="text" placeholder="Apt. Number" formControlName="houseNum" />
+        <mat-error *ngIf="customerDetails.get('houseNum').hasError('required') && !customerDetails.get('houseNum').pristine">House No is Required!...</mat-error>
+      </mat-form-field>&nbsp;&nbsp;
+
+
+      <mat-form-field class="full-width-input">
+        <input matInput type="text" placeholder="City" formControlName="city" />
+        <mat-error *ngIf="customerDetails.get('city').hasError('required') && !customerDetails.get('city').pristine">City is Required!...</mat-error>
+      </mat-form-field>&nbsp;&nbsp;
+
+      <mat-form-field class="full-width-input">
+        <input matInput type="text" placeholder="Floor" formControlName="floor" />
+        <mat-error *ngIf="customerDetails.get('floor').hasError('required') && !customerDetails.get('floor').pristine">Floor is Required!...</mat-error>
+      </mat-form-field>&nbsp;&nbsp;
+
+  </div>
+    <div class="row">
+
+        <button mat-raised-button color="primary" [disabled]="customerDetails.invalid" type="submit">submit</button>
+    </div>
+
+</form>
+</div>
