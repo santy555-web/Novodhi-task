@@ -2,7 +2,6 @@ import {BrowserModule } from '@angular/platform-browser';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import {AppComponent } from './app.component';
 import {HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import {Task9Component } from './task9/task9.component';
 import {A11yModule} from '@angular/cdk/a11y';
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import {PortalModule} from '@angular/cdk/portal';
@@ -60,7 +59,6 @@ import { VoteridDirective } from './voterid.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    Task9Component,
     FormTask9Component,
     ShowdataComponent,
     EditdataComponent,
